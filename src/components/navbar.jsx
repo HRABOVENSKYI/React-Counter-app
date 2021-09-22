@@ -1,20 +1,17 @@
 import React from "react";
 
-class NavBar extends React.Component {
-  render() {
-    return (
-      <nav className="navbar navbar-light bg-light">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar{" "}
-            <span className="badge bg-secondary">
-              {this.props.totalCounters}
-            </span>
-          </a>
-        </div>
-      </nav>
-    );
-  }
-}
+// Stateless Functional Component
+const NavBar = (props) => {
+  return (
+    <nav className="navbar navbar-light bg-light">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="#">
+          Navbar{" "}
+          <span className="badge bg-secondary">{props.totalCounters}</span>
+        </a>
+      </div>
+    </nav>
+  );
+};
 
 export default NavBar;
